@@ -14,6 +14,7 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(quote_params)
+    sleep 3
 
     if @quote.save
       redirect_to quotes_path, notice: "Quote was successfully created."
